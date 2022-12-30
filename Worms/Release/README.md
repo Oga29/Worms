@@ -61,3 +61,8 @@ R: Kill all the red wormsF5
 all assets has been taken from Sprites Resource website in Worms Armageddon section
 
 (https://www.spriters-resource.com/pc_computer/wormsgeddon/)
+
+
+## Game made
+
+by Oga (https://github.com/Oga29)
