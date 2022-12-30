@@ -1,0 +1,157 @@
+﻿  AirStrike.cpp
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(55,19): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(57,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\AirStrike.cpp(32,13): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Application.cpp
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(55,19): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(57,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  EntityManager.cpp
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(55,19): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(57,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\EntityManager.cpp(65,76): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\EntityManager.cpp(65,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\EntityManager.cpp(67,75): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\EntityManager.cpp(67,47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Granade.cpp
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(55,19): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(57,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Granade.cpp(26,30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Granade.cpp(27,30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  HandGun.cpp
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(55,19): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(57,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\HandGun.cpp(26,30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\HandGun.cpp(27,30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  log.cpp
+  Main.cpp
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(55,19): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(57,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Main.cpp(95,30): warning C4244: '=': conversion from 'Uint32' to 'float', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Main.cpp(101,30): warning C4244: '=': conversion from 'Uint32' to 'float', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Main.cpp(111,17): warning C4244: '=': conversion from 'uint' to 'float', possible loss of data
+  ModuleAudio.cpp
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(55,19): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(57,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  ModuleFadeToBlack.cpp
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(55,19): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(57,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModuleFadeToBlack.cpp(80,19): warning C4244: '=': conversion from 'float' to 'Uint32', possible loss of data
+  ModuleFonts.cpp
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(55,19): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(57,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  ModuleInput.cpp
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(55,19): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(57,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  ModulePhysics.cpp
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(55,19): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(57,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(53,33): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(53,33): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(53,62): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(53,62): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(53,87): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(53,87): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(53,98): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(53,98): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(113,63): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(113,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(113,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(117,63): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(117,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(117,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(122,62): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(122,50): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(122,38): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(126,91): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(126,64): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(126,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(126,36): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(127,62): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(127,50): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(127,38): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(134,33): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(134,33): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(134,62): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(134,62): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(134,87): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(134,87): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(134,98): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(134,98): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(159,91): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(159,64): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(159,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\ModulePhysics.cpp(159,36): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  ModulePlayer.cpp
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(55,19): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(57,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  ModuleRender.cpp
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(55,19): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(57,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  ModuleSceneEnd.cpp
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(55,19): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(57,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  ModuleSceneIntro.cpp
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(55,19): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(57,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  ModuleSceneStart.cpp
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(55,19): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(57,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  ModuleTextures.cpp
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(55,19): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(57,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  ModuleUi.cpp
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(55,19): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(57,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  ModuleWindow.cpp
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(55,19): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(57,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+  Compiling...
+  Physics.cpp
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(55,19): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(57,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Physics.cpp(4,1): warning C4005: 'M_PI': macro redefinition
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\SDL\include\SDL_stdinc.h(436): message : see previous definition of 'M_PI'
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Physics.cpp(9,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Physics.cpp(10,11): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Physics.cpp(9,32): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Physics.cpp(29,35): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Physics.cpp(29,29): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Physics.cpp(29,23): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Physics.cpp(29,17): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Physics.cpp(16,12): warning C4101: 'dy': unreferenced local variable
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Physics.cpp(15,8): warning C4101: 'normaly': unreferenced local variable
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Physics.cpp(16,8): warning C4101: 'dx': unreferenced local variable
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Physics.cpp(14,8): warning C4101: 'normalx': unreferenced local variable
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Physics.cpp(242,26): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Physics.cpp(243,26): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Physics.cpp(305,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Physics.cpp(306,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Physics.cpp(343,20): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Physics.cpp(346,20): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Physics.cpp(350,21): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Physics.cpp(353,21): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Physics.cpp(510,18): warning C4305: '*=': truncation from 'double' to 'float'
+  PhysObject.cpp
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(55,19): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(57,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\PhysObject.cpp(11,6): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\PhysObject.cpp(12,6): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Portal.cpp
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(55,19): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(57,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Portal.cpp(21,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Portal.cpp(21,36): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Portal.cpp(40,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Portal.cpp(40,36): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  PortalGun.cpp
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(55,19): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(57,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Vector2d.cpp
+  Worm.cpp
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(55,19): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Animation.h(57,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Worm.cpp(222,66): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Worm.cpp(222,39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+  SDL Game.vcxproj -> C:\Users\ASUS\Desktop\Gamedev\WormsGame-main\Debug\Physics 2 Class 1 Handout.exe
