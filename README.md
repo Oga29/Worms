@@ -65,4 +65,4 @@ all assets has been taken from Sprites Resource website in Worms Armageddon sect
 
 ## Game made
 
-by Oga29 
+by Oga (https://github.com/Oga29)
