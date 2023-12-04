@@ -2,7 +2,7 @@
 #include "Vector2d.h"
 #include "Animation.h"
 #include "SString.h"
-#include "ShotGun.h"
+#include "HandGun.h"
 #include "p2List.h"
 
 enum class EntityType

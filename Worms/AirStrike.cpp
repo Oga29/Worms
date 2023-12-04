@@ -9,7 +9,7 @@ AirStrike::AirStrike(Application* app_, Module* listener_, Entity* ent_) : Weapo
 	name.Create("airstrike");
 	ammo = 1;
 	id = 1;
-	
+	SFX = app->audio->LoadFx("Assets/SFX/Airstrike.wav");
 }
 
 AirStrike::~AirStrike()
@@ -39,10 +39,10 @@ void AirStrike::Use(Vector2d position)
 		bomb->restitution = 0.1f;
 		bomb->name.Create("Ground2");
 		bomb->type = Type::DYNAMIC;
-		bomb->object = ObjectType::AIRSTRIKE;
+		bomb->object = ObjectType::BOMB;
 		bomb->SetLimit(Vector2d(300.0f, 300.0f));
 		app->physics->world.CreateObject(bomb);
 
-		
+		app->audio->PlayFx(SFX);
 	}
 }

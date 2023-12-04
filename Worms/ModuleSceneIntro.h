@@ -4,7 +4,7 @@
 #include "p2DynArray.h"
 #include "Globals.h"
 #include "ModulePhysics.h"
-
+#include "Portal.h"
 enum Winner
 {
 	NONE = -1,
@@ -30,8 +30,8 @@ public:
 	void StartTurn();
 	void EndTurn();
 public:
-	
-	
+	//Current portal
+	Portal* portal;
 
 	p2List<Worm*> wormsRed;
 	p2List<Worm*> wormsBlue;

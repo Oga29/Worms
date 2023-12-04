@@ -33,7 +33,7 @@ bool ModuleSceneIntro::Start()
 	g->w = 1020;
 	g->h = 10;
 	g->restitution = 0.1f;
-	g->name.Create("Ground");
+	g->name.Create("Ground1");
 	g->type = Type::STATIC;
 
 	App->physics->world.CreateObject(g);
@@ -60,10 +60,10 @@ bool ModuleSceneIntro::Start()
 	g3->y = 250.0f;
 	g3->mass = 1.0f;
 	g3->shape = Shape::RECTANGLE;
-	g3->w = 500;
+	g3->w = 210;
 	g3->h = 20;
 	g3->restitution = 0.1f;
-	g3->name.Create("Ground3");
+	g3->name.Create("Ground2");
 	g3->type = Type::STATIC;
 
 	App->physics->world.CreateObject(g3);
@@ -72,14 +72,14 @@ bool ModuleSceneIntro::Start()
 
 	PhysObject* g4 = new PhysObject();
 
-	g4->x = 100.0f;
-	g4->y = 400.0f;
+	g4->x = 800.0f;
+	g4->y = 350.0f;
 	g4->mass = 1.0f;
 	g4->shape = Shape::RECTANGLE;
-	g4->w = 500;
+	g4->w = 200;
 	g4->h = 20;
 	g4->restitution = 0.1f;
-	g4->name.Create("Ground4");
+	g4->name.Create("Ground2");
 	g4->type = Type::STATIC;
 
 	App->physics->world.CreateObject(g4);
@@ -87,14 +87,14 @@ bool ModuleSceneIntro::Start()
 
 	PhysObject* g5 = new PhysObject();
 
-	g5->x = 100.0f;
-	g5->y = 550.0f;
+	g5->x = 650.0f;
+	g5->y = 200.0f;
 	g5->mass = 1.0f;
 	g5->shape = Shape::RECTANGLE;
-	g5->w = 500;
-	g5->h = 20;
+	g5->w = 100;
+	g5->h = 10;
 	g5->restitution = 0.1f;
-	g5->name.Create("Ground5");
+	g5->name.Create("Ground2");
 	g5->type = Type::STATIC;
 
 	App->physics->world.CreateObject(g5);
@@ -102,83 +102,27 @@ bool ModuleSceneIntro::Start()
 
 	PhysObject* g6 = new PhysObject();
 
-	g6->x = 900.0f;
-	g6->y = 250.0f;
+	g6->x = 250.0f;
+	g6->y = 350.0f;
 	g6->mass = 1.0f;
 	g6->shape = Shape::RECTANGLE;
-	g6->w = 500;
-	g6->h = 20;
+	g6->w = 100;
+	g6->h = 10;
 	g6->restitution = 0.1f;
-	g6->name.Create("Ground6");
+	g6->name.Create("Ground2");
 	g6->type = Type::STATIC;
 
 	App->physics->world.CreateObject(g6);
 
-	PhysObject* g7 = new PhysObject();
+	wormsRed.add((Worm*)App->entman->CreateEntity(EntityType::WORM, 50, 223, Team::RED));
+	wormsRed.add((Worm*)App->entman->CreateEntity(EntityType::WORM, 150, 223, Team::RED));
+	wormsRed.add((Worm*)App->entman->CreateEntity(EntityType::WORM, 250, 328, Team::RED));
+	wormsRed.add((Worm*)App->entman->CreateEntity(EntityType::WORM, 350, 728, Team::RED));
 
-	g7->x = 900.0f;
-	g7->y = 400.0f;
-	g7->mass = 1.0f;
-	g7->shape = Shape::RECTANGLE;
-	g7->w = 500;
-	g7->h = 20;
-	g7->restitution = 0.1f;
-	g7->name.Create("Ground7");
-	g7->type = Type::STATIC;
-
-	App->physics->world.CreateObject(g7);
-	
-	PhysObject* g8 = new PhysObject();
-
-	g8->x = 900.0f;
-	g8->y = 550.0f;
-	g8->mass = 1.0f;
-	g8->shape = Shape::RECTANGLE;
-	g8->w = 500;
-	g8->h = 20;
-	g8->restitution = 0.1f;
-	g8->name.Create("Ground8");
-	g8->type = Type::STATIC;
-
-	App->physics->world.CreateObject(g8);
-
-	PhysObject* g9 = new PhysObject();
-
-	g9->x = 500.0f;
-	g9->y = 200.0f;
-	g9->mass = 1.0f;
-	g9->shape = Shape::RECTANGLE;
-	g9->w = 100;
-	g9->h = 20;
-	g9->restitution = 0.1f;
-	g9->name.Create("Ground9");
-	g9->type = Type::STATIC;
-
-	App->physics->world.CreateObject(g9);
-
-	PhysObject* g10 = new PhysObject();
-
-	g10->x = 500.0f;
-	g10->y = 600.0f;
-	g10->mass = 1.0f;
-	g10->shape = Shape::RECTANGLE;
-	g10->w = 100;
-	g10->h = 20;
-	g10->restitution = 0.1f;
-	g10->name.Create("Ground9");
-	g10->type = Type::STATIC;
-
-	App->physics->world.CreateObject(g10);
-
-	wormsBlue.add((Worm*)App->entman->CreateEntity(EntityType::WORM, 850, 205, Team::BLUE));
-	wormsBlue.add((Worm*)App->entman->CreateEntity(EntityType::WORM, 850, 355, Team::BLUE));
-	wormsBlue.add((Worm*)App->entman->CreateEntity(EntityType::WORM, 850, 515, Team::BLUE));
-	wormsBlue.add((Worm*)App->entman->CreateEntity(EntityType::WORM, 850, 685, Team::BLUE));
-
-	wormsRed.add((Worm*)App->entman->CreateEntity(EntityType::WORM, 150, 205, Team::RED));
-	wormsRed.add((Worm*)App->entman->CreateEntity(EntityType::WORM, 150, 355, Team::RED));
-	wormsRed.add((Worm*)App->entman->CreateEntity(EntityType::WORM, 150, 515, Team::RED));
-	wormsRed.add((Worm*)App->entman->CreateEntity(EntityType::WORM, 150, 685, Team::RED));
+	wormsBlue.add((Worm*)App->entman->CreateEntity(EntityType::WORM, 550, 423, Team::BLUE));
+	wormsBlue.add((Worm*)App->entman->CreateEntity(EntityType::WORM, 650, 178, Team::BLUE));
+	wormsBlue.add((Worm*)App->entman->CreateEntity(EntityType::WORM, 750, 323, Team::BLUE));
+	wormsBlue.add((Worm*)App->entman->CreateEntity(EntityType::WORM, 850, 323, Team::BLUE));
 
 	currentWormBlue = wormsBlue.getFirst();
 	currentWormBlue->data->Select();
@@ -186,8 +130,10 @@ bool ModuleSceneIntro::Start()
 	blueTurn = true;
 	redTurn = false;
 	turnTimer = 1800;
+	//App->audio->PlayMusic("Assets/Music/EndingMusic.ogg");
+	portal = new Portal();
 	winner = Winner::NONE;
-	background = App->textures->Load("Assets/background.png");
+	background = App->textures->Load("Assets/Scene/back.png");
 	return ret;
 }
 
@@ -321,27 +267,26 @@ update_status ModuleSceneIntro::Update()
 	
 	if (App->physics->debug)
 	{
-		if (App->input->GetKey(SDL_SCANCODE_1))
+		if (App->input->GetKey(SDL_SCANCODE_4))
 		{
 			App->targetDT = 1000 / 15;
 			App->bulletDT = 1000 / 15;
 		}
-		if (App->input->GetKey(SDL_SCANCODE_2))
+		if (App->input->GetKey(SDL_SCANCODE_1))
 		{
 			App->targetDT = 1000 / 30;
 			App->bulletDT = 1000 / 30;
 		}
-		if (App->input->GetKey(SDL_SCANCODE_3))
+		if (App->input->GetKey(SDL_SCANCODE_2))
 		{
 			App->targetDT = 1000 / 60;
 			App->bulletDT = 1000 / 60;
 		}
-		if (App->input->GetKey(SDL_SCANCODE_4))
+		if (App->input->GetKey(SDL_SCANCODE_3))
 		{
 			App->targetDT = 1000 / 144;
 			App->bulletDT = 1000 / 144;
 		}
-
 		if (App->input->GetKey(SDL_SCANCODE_F2))
 			App->controll = FrameTimeControll::VARIABLEDT;
 		if (App->input->GetKey(SDL_SCANCODE_F3))
@@ -405,8 +350,8 @@ update_status ModuleSceneIntro::Update()
 		}
 	}
 
-	printf("\nRed Team turn %s", redTurn ? "true" : "false");
-	printf("\nBlue Team turn %s", blueTurn ? "true" : "false");
+	printf("\nRed turn %s", redTurn ? "true" : "false");
+	printf("\nBlue turn %s", blueTurn ? "true" : "false");
 	printf("\nWorms Red %i", wormsRed.count());
 	printf("\nWorms Blue %i", wormsBlue.count());
 

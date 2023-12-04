@@ -25,6 +25,6 @@ public:
 
 	Physics world;
 	bool debug;
-	SDL_Texture* airStrike;
+	SDL_Texture* bomb;
 
 };

@@ -1,10 +1,10 @@
 
 #include "Entity.h"
 #include "Animation.h"
-#include "ShotGun.h"
+#include "HandGun.h"
 #include "p2List.h"
 #include "AirStrike.h"
-
+#include "PortalGun.h"
 
 class Worm : public Entity
 {
@@ -30,7 +30,11 @@ private:
 	Animation atackAnim;
 	Animation deadAnim;
 	Animation talkAnim;
+	Animation portalAnim;
 	Animation grenadeAnim;
-	
+	int walkSFX;
+	int jumpSFX;
+	int deadSFX;
+	int changeSFX;
 };
 

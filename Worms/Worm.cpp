@@ -6,7 +6,7 @@
 #include "Animation.h"
 #include "ModuleRender.h"
 #include "ModuleTextures.h"
-#include "Grenade.h"
+#include "Granade.h"
 #include "ModuleAudio.h"
 Worm::Worm(Vector2d position_, Team team_, Application* app_, Module* listener_) : Entity(EntityType::WORM, position_, team_, app_, listener_)
 {
@@ -26,51 +26,61 @@ Worm::Worm(Vector2d position_, Team team_, Application* app_, Module* listener_)
 	pbody->SetLimit(Vector2d(300.0f, 300.0f));
 	isSelected = false;
 
-	shotGun* gun = new shotGun(app_, listener, this);
+	HandGun* gun = new HandGun(app_, listener, this);
 	guns.add(gun);
 	AirStrike* air = new AirStrike(app_, listener, this);
 	guns.add(air);
-	Grenade* grenade = new Grenade(app_, listener, this);
-	guns.add(grenade);
-	
+	PortalGun* pgun = new PortalGun(app_, listener, this);
+	guns.add(pgun);
+	Granade* granade = new Granade(app_, listener, this);
+	guns.add(granade);
+	// SETING ANIMATIONS
 	currentAnim = &idleAnim;
 	currentWeapon = guns.getFirst();
 	int offset = 10;
 
-	
-	jumpAnim.PushBack({ 6, 15,  18, 30 });
+	for (int i = 0; i < 36; i++)
+		jumpAnim.PushBack({ 108 + offset - i / 5,i * 60 + offset,54 - (3*offset),64 - offset });
 	jumpAnim.loop = true;
 	jumpAnim.mustFlip = false;
 	jumpAnim.speed = 0.1f;
 
 
-	
-	idleAnim.PushBack({ 6, 15,  18, 30 });
+	for (int i = 0; i < 36; i++)
+		idleAnim.PushBack({ 3 * 54 + offset,i * 60 + offset,54 - (offset*3),64 - offset });
 	idleAnim.loop = true;
 	idleAnim.mustFlip = false;
 	idleAnim.speed = 0.1f;
 
-	
-	deadAnim.PushBack({ 369, 12,  18, 30 });
-	deadAnim.PushBack({ 372, 70,  18, 30 });
-	deadAnim.PushBack({ 367, 130,  18, 30 });
-	deadAnim.PushBack({ 244, 136,  18, 30 });
-	//deadAnim.PushBack({ 304, 14,  18, 30 });
-	//deadAnim.PushBack({ 304, 14,  18, 30 });
+	for (int i = 0; i < 11; i++)
+		deadAnim.PushBack({ 15 * 54, i * 60 + offset + 5,54 - (2*offset),64 - offset });
 	deadAnim.loop = false;
 	deadAnim.mustFlip = true;
 	deadAnim.speed = 0.07f;
 
-	
-	atackAnim.PushBack({ 197, 13,  20, 30 });
+	for (int i = 20 ; i < 23; i++)
+		atackAnim.PushBack({ 9 * 54 + (offset * 3),i * 60 + offset,54 - (3*offset+2),64 - offset });
 	atackAnim.loop = true;
 	atackAnim.mustFlip = false;
 	atackAnim.speed = 0.1f;
 	atackAnim.pingpong = true;
 
+	for (int i = 0; i < 5; i++)
+		talkAnim.PushBack({ 5 * 54 + offset,(5 + i) * 60+offset,54 - offset*2,64 - offset });
+	talkAnim.loop = false;
+	talkAnim.mustFlip = false;
+	talkAnim.speed = 0.07f;
+	talkAnim.pingpong = true;
 
-	
-	grenadeAnim.PushBack({ 202, 72,  18, 30 });
+	for (int i = 20; i < 23; i++)
+		portalAnim.PushBack({ 14 * 54 + (offset * 3),i * 60 + offset,54 - (3 * offset + 2),64 - offset });
+	portalAnim.loop = true;
+	portalAnim.mustFlip = false;
+	portalAnim.speed = 0.1f;
+	portalAnim.pingpong = true;
+
+	for (int i = 20; i < 23; i++)
+		grenadeAnim.PushBack({ 16 * 54 + (offset * 3),i * 60 + offset,54 - (3 * offset + 2),64 - offset });
 	grenadeAnim.loop = true;
 	grenadeAnim.mustFlip = false;
 	grenadeAnim.speed = 0.1f;
@@ -78,7 +88,10 @@ Worm::Worm(Vector2d position_, Team team_, Application* app_, Module* listener_)
 
 	laser = false;
 
-	
+	walkSFX = app_->audio->LoadFx("Assets/SFX/Walk-Expand.wav");
+	deadSFX = app_->audio->LoadFx("Assets/SFX/COUGH5.WAV");
+	jumpSFX = app_->audio->LoadFx("Assets/SFX/WORMSPRING.WAV");
+	changeSFX = app_->audio->LoadFx("Assets/SFX/SHOTGUNRELOAD.WAV");
 }
 
 Worm::~Worm()
@@ -104,13 +117,13 @@ void Worm::Update(float dt)
 				{
 					pbody->AddForce(Vector2d(-10.0f, 0.0f));
 					currentAnim->mustFlip = false;
-					
+					if (app_->frame % 10 == 0 && isGrounded == true) app_->audio->PlayFx(walkSFX);
 				}
 				if (app_->input->GetKey(SDL_SCANCODE_D) == KEY_REPEAT)
 				{
 					pbody->AddForce(Vector2d(+10.0f, 0.0f));
 					currentAnim->mustFlip = true;
-					
+					if (app_->frame % 10 == 0 && isGrounded == true) app_->audio->PlayFx(walkSFX);
 				}
 				if (app_->input->GetKey(SDL_SCANCODE_W) == KEY_DOWN)
 				{
@@ -133,7 +146,7 @@ void Worm::Update(float dt)
 		
 		}
 		printf("\n pos: %f, %f, m: %i, %i", position.x, position.y, app_->input->GetMouseX(), app_->input->GetMouseY());
-		if (currentWeapon->data->id == 0) //Shotgun
+		if (currentWeapon->data->id == 0) //Id 0 means handgun
 		{
 			atackAnim.mustFlip = currentAnim->mustFlip;
 			currentAnim = &atackAnim;
@@ -141,14 +154,19 @@ void Worm::Update(float dt)
 		}
 		else laser = false;
 
-		if (currentWeapon->data->id == 1) //Airstrike
+		if (currentWeapon->data->id == 1) //Id 1 means airstrike
 		{
 			talkAnim.mustFlip = currentAnim->mustFlip;
 			currentAnim = &talkAnim;
 		}
 
+		if (currentWeapon->data->id == 2) //Id 2 means portal
+		{
+			portalAnim.mustFlip = currentAnim->mustFlip;
+			currentAnim = &portalAnim;
+		}
 
-		if (currentWeapon->data->id == 2) //Grenade
+		if (currentWeapon->data->id == 3) //Id 2 means grenade
 		{
 			grenadeAnim.mustFlip = currentAnim->mustFlip;
 			currentAnim = &grenadeAnim;
@@ -159,12 +177,12 @@ void Worm::Update(float dt)
 			currentAnim = &idleAnim;
 		}
 
-		if(app_->input->GetKey(SDL_SCANCODE_TAB) == KEY_DOWN)
+		if(app_->input->GetKey(SDL_SCANCODE_F) == KEY_DOWN)
 		{
 			currentWeapon = currentWeapon->next;
 			if (currentWeapon == nullptr)
 				currentWeapon = guns.getFirst();
-			
+			app_->audio->PlayFx(changeSFX);
 		}
 		if (currentAnim == &talkAnim && app_->input->GetKey(SDL_SCANCODE_SPACE) == KEY_REPEAT)
 			currentAnim->Update();
@@ -179,7 +197,7 @@ void Worm::Update(float dt)
 
 	if (health <= 0)
 	{
-		
+		app_->audio->PlayFx(deadSFX);
 		if (currentAnim != &deadAnim)
 		{
 			deadAnim.mustFlip = !currentAnim->mustFlip;

@@ -13,7 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{746CC4C3-787F-4B0E-AA66-E388FE3FF4F6}</ProjectGuid>
     <RootNamespace>SDLGame</RootNamespace>
-    <ProjectName>2D Physics</ProjectName>
+    <ProjectName>Physics 2 Class 1 Handout</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -70,13 +70,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="AirStrike.h" />
-    <ClInclude Include="Animation.h" />
     <ClInclude Include="Application.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="EntityManager.h" />
     <ClInclude Include="Globals.h" />
-    <ClInclude Include="Grenade.h" />
-    <ClInclude Include="ShotGun.h" />
+    <ClInclude Include="Granade.h" />
+    <ClInclude Include="HandGun.h" />
     <ClInclude Include="ModuleFadeToBlack.h" />
     <ClInclude Include="ModuleFonts.h" />
     <ClInclude Include="ModulePhysics.h" />
@@ -96,6 +95,8 @@
     <ClInclude Include="p2Point.h" />
     <ClInclude Include="Physics.h" />
     <ClInclude Include="PhysObject.h" />
+    <ClInclude Include="Portal.h" />
+    <ClInclude Include="PortalGun.h" />
     <ClInclude Include="Queue.h" />
     <ClInclude Include="Vector2d.h" />
     <ClInclude Include="SString.h" />
@@ -106,7 +107,7 @@
     <ClCompile Include="AirStrike.cpp" />
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="EntityManager.cpp" />
-    <ClCompile Include="Grenade.cpp" />
+    <ClCompile Include="Granade.cpp" />
     <ClCompile Include="HandGun.cpp" />
     <ClCompile Include="log.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -125,6 +126,8 @@
     <ClCompile Include="ModuleWindow.cpp" />
     <ClCompile Include="Physics.cpp" />
     <ClCompile Include="PhysObject.cpp" />
+    <ClCompile Include="Portal.cpp" />
+    <ClCompile Include="PortalGun.cpp" />
     <ClCompile Include="Vector2d.cpp" />
     <ClCompile Include="Worm.cpp" />
   </ItemGroup>

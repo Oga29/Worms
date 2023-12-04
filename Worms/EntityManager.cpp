@@ -21,11 +21,11 @@ EntityManager::~EntityManager()
 bool EntityManager::Start()
 {
 	char lookupTable[] = { "! @,_./0123456789$;< ?abcdefghijklmnopqrstuvwxyz" };
-	
-	testFont = App->fonts->Load("Assets/blueFont.png", lookupTable, 2);
-	redFont = App->fonts->Load("Assets/redFont.png", lookupTable, 2);
-	blueFont = App->fonts->Load("Assets/bluefont.png", lookupTable, 2);
-	wormsSprite = App->textures->Load("Assets/sprites.png");
+	testFont = App->fonts->Load("Assets/Fonts/rtype_font3.png", lookupTable, 2);
+	redTeamFont = App->fonts->Load("Assets/Fonts/rtype_font2.png", lookupTable, 2);
+	blueTeamFont = App->fonts->Load("Assets/Fonts/rtype_font.png", lookupTable, 2);
+	wormsSprite = App->textures->Load("Assets/Worms/sprites.png");
+	ExSFX = App->audio->LoadFx("Assets/SFX/Explosion1.wav");
 	return true;
 }
 
@@ -57,9 +57,9 @@ void EntityManager::UpdateAll(float dt, bool doLogic)
 			SString tmp("%s %i", ent->data->name.GetString(), ent->data->health);
 			int font = 0;
 			if (ent->data->team == Team::RED)
-				font = font;
+				font = redTeamFont;
 			else if (ent->data->team == Team::BLUE)
-				font = blueFont;
+				font = blueTeamFont;
 			if (ent->data->isSelected)
 			{
 				App->fonts->BlitText(ent->data->GetPos().x - 20, ent->data->GetPos().y - 40, font, "selected");
@@ -98,7 +98,7 @@ bool EntityManager::CleanUp()
 
 void EntityManager::OnCollision(PhysObject* bodyA, PhysObject* bodyB)
 {
-	if (bodyA->object == ObjectType::AIRSTRIKE)
+	if (bodyA->object == ObjectType::BOMB && bodyB->object != ObjectType::PORTAL)
 	{
 		printf("\nBomb collision");
 		bodyA->setPendingToDelete = true;
@@ -106,7 +106,7 @@ void EntityManager::OnCollision(PhysObject* bodyA, PhysObject* bodyB)
 		{
 			bodyB->entity->health -= 50;
 		}
-		
+		App->audio->PlayFx(ExSFX);
 	}
 	if (bodyA->object == ObjectType::BULLET && bodyA->entity != bodyB->entity)
 	{
@@ -115,7 +115,7 @@ void EntityManager::OnCollision(PhysObject* bodyA, PhysObject* bodyB)
 		{
 			bodyB->entity->health -= 30;
 		}
-		
+		App->audio->PlayFx(ExSFX);
 	}
 	if (bodyA->object == ObjectType::GRENADE && bodyA->entity != bodyB->entity)
 	{
@@ -124,7 +124,7 @@ void EntityManager::OnCollision(PhysObject* bodyA, PhysObject* bodyB)
 		{
 			bodyB->entity->health -= 60;
 		}
-		
+		App->audio->PlayFx(ExSFX);
 	}
 }
 

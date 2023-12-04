@@ -15,8 +15,8 @@ ModuleSceneEnd::~ModuleSceneEnd()
 
 bool ModuleSceneEnd::Start()
 {
-	rwin = App->textures->Load("Assets/redTeamWin.png");
-	bwin = App->textures->Load("Assets/blueTeamWin.png");
+	rwin = App->textures->Load("Assets/screens/REDTEAMWINS.png");
+	bwin = App->textures->Load("Assets/screens/BLUETEAMWINS.png");
 	return true;
 }
 

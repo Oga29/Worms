@@ -23,14 +23,14 @@ bool ModulePhysics::Start()
 	world.Start(Integrator::VERLET, 0.0f, 100.0f);
 	world.atmosphere.density = 1.0f;
 	world.atmosphere.wind = Vector2d(0.0f, 0.0f);
-	airStrike = App->textures->Load("Assets/airStrike.png");
+	bomb = App->textures->Load("Assets/Worms/bomb.png");
 	return true;
 }
 
 // 
 update_status ModulePhysics::PreUpdate()
 {
-	// TODO 3: Update the simulation ("step" the world)w
+	// TODO 3: Update the simulation ("step" the world)
 	world.PreUpdate();
 
 
@@ -51,8 +51,21 @@ update_status ModulePhysics::Update()
 		if (w->data->shape == Shape::RECTANGLE)
 		{
 			SDL_Rect rect = { w->data->x - w->data->w / 2, w->data->y - w->data->h / 2, w->data->w,w->data->h };
-			
-			if (w->data->object == ObjectType::WATER)
+			if (w->data->object == ObjectType::PORTAL)
+			{
+				if (w->data->portal == PortalType::ORANGE)
+				{
+					App->renderer->DrawQuad(rect, 255, 69, 0, 100, true);
+
+				}
+
+				else if (w->data->portal == PortalType::PURPLE)
+				{
+					App->renderer->DrawQuad(rect, 127, 0, 255, 100, true);
+
+				}
+			}
+			else if (w->data->object == ObjectType::WATER)
 			{
 				App->renderer->DrawQuad(rect, 0, 123, 255, 100, true);
 			}
@@ -64,9 +77,9 @@ update_status ModulePhysics::Update()
 			{
 				App->renderer->DrawQuad(rect, 75, 83, 32, 255, true);
 			}
-			else if (w->data->object == ObjectType::AIRSTRIKE)
+			else if (w->data->object == ObjectType::BOMB)
 			{
-				App->renderer->Blit(airStrike, rect.x, rect.y);
+				App->renderer->Blit(bomb, rect.x, rect.y);
 			}
 			else if (w->data->type == Type::STATIC)
 			{
@@ -93,7 +106,17 @@ update_status ModulePhysics::Update()
 	{
 		if (o->data->shape == Shape::CIRCLE)
 		{
-			
+			if (o->data->object == ObjectType::PORTAL)
+			{
+				if (o->data->portal == PortalType::ORANGE)
+				{
+					App->renderer->DrawCircle(o->data->x, o->data->y, o->data->radius, 255, 69, 0, 255);
+				}
+				else if (o->data->portal == PortalType::PURPLE)
+				{
+					App->renderer->DrawCircle(o->data->x, o->data->y, o->data->radius, 127, 0, 255, 255);
+				}
+			}
 			if (o->data->object == ObjectType::WATER)
 			{
 				App->renderer->DrawCircle(o->data->x, o->data->y, o->data->radius, 0, 123, 255, 255);
@@ -109,14 +132,30 @@ update_status ModulePhysics::Update()
 		if (o->data->shape == Shape::RECTANGLE)
 		{
 			SDL_Rect rect = { o->data->x - o->data->w / 2, o->data->y - o->data->h / 2, o->data->w,o->data->h };
-			
-			if (o->data->object == ObjectType::WATER)
+			if (o->data->object == ObjectType::PORTAL)
+			{
+				if (o->data->portal == PortalType::ORANGE)
+				{
+					App->renderer->DrawQuad(rect, 255, 69, 0, 255, false);
+
+				}
+
+				else if (o->data->portal == PortalType::PURPLE)
+				{
+					App->renderer->DrawQuad(rect, 127, 0, 255, 255, false);
+
+				}
+			}
+			else if (o->data->object == ObjectType::WATER)
 			{
 				App->renderer->DrawQuad(rect, 0, 123, 255, 255, false);
 			}
 			else
 			{
-				
+				/*App->renderer->DrawLine(o->data->x, o->data->ot, o->data->x, o->data->ob, 255, 69, 0, 255);
+				App->renderer->DrawLine(o->data->ol, o->data->y, o->data->oR, o->data->y, 255, 69, 0, 255);
+				App->renderer->DrawLine(o->data->x, o->data->t, o->data->x, o->data->b, 0, 255, 0, 255);
+				App->renderer->DrawLine(o->data->l, o->data->y, o->data->r, o->data->y, 0, 255, 0, 255);*/
 				App->renderer->DrawLine(o->data->x, o->data->y, o->data->x + o->data->v.x, o->data->y + o->data->v.y, 255, 0, 0, 255);
 
 

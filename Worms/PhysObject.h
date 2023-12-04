@@ -12,12 +12,19 @@ enum class Shape
 enum class ObjectType
 {
 	STANDART = -1,
-	
-	AIRSTRIKE,
+	PORTAL,
+	PLANT,
+	BOMB,
 	BULLET,
 	SENSOR,
 	WATER,
 	GRENADE
+};
+enum class PortalType
+{
+	NONE = -1,
+	ORANGE,
+	PURPLE
 };
 enum class Type
 {
@@ -82,7 +89,9 @@ public:
 	Type type;
 	SString name;
 	ObjectType object = ObjectType::STANDART;
+	PortalType portal = PortalType::NONE;
 	bool setPendingToDelete = false;
+	bool hasEnteredAPortal = false;
 	bool hasLift = false;
 	bool isOnWater = false;
 

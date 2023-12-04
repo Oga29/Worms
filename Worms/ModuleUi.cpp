@@ -23,13 +23,12 @@ ModuleUi::~ModuleUi()
 
 bool ModuleUi::Start() {
 
-	//char lookupTable[] = { "! @,_./0123456789$;< ?abcdefghijklmnopqrstuvwxyz" };
 	char lookupTable[] = { "! @,_./0123456789$;< ?abcdefghijklmnopqrstuvwxyz" };
 	char lookUpTable2[] = { "abcdefghijklmnopqrstuvwxyz0123456789!.?   " };
-	testFont = App->fonts->Load("Assets/font.png", lookupTable, 2);
-	font = App->fonts->Load("Assets/font.png", lookUpTable2, 7);
-	rFont = App->fonts->Load("Assets/redFont.png", lookupTable, 2);
-	bFont = App->fonts->Load("Assets/blueFont.png", lookupTable, 2);
+	testFont = App->fonts->Load("Assets/Fonts/rtype_font3.png", lookupTable, 2);
+	font = App->fonts->Load("Assets/Fonts/font.png", lookUpTable2, 7);
+	rFont = App->fonts->Load("Assets/Fonts/rtype_font2.png", lookupTable, 2);
+	bFont = App->fonts->Load("Assets/Fonts/rtype_font.png", lookupTable, 2);
 
 	return true;
 }
@@ -45,8 +44,8 @@ update_status ModuleUi::Update()
 	App->fonts->BlitText(900, 0, testFont, time.GetString());
 	App->fonts->BlitText(10, 725, rFont, weaponRed.GetString());
 	App->fonts->BlitText(850, 725, bFont, weaponBlue.GetString());
-	if (App->scene_intro->blueTurn) App->fonts->BlitText(500, 0, bFont, "blue team turn");
-	if (App->scene_intro->redTurn) App->fonts->BlitText(500, 0, rFont, "red team turn");
+	if (App->scene_intro->blueTurn) App->fonts->BlitText(500, 0, bFont, "blue turn");
+	if (App->scene_intro->redTurn) App->fonts->BlitText(500, 0, rFont, "red turn");
 	return update_status::UPDATE_CONTINUE;
 }
 

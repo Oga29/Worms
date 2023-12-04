@@ -14,8 +14,8 @@ ModuleSceneStart::~ModuleSceneStart()
 
 bool ModuleSceneStart::Start()
 {
-	background = App->textures->Load("Assets/titleScreen.png");
-	enter = App->textures->Load("Assets/pressButton.png");
+	background = App->textures->Load("Assets/screens/wormsintroscreen.png");
+	enter = App->textures->Load("Assets/screens/pressenter.png");
 	counter = 0;
 	return true;
 }
@@ -31,7 +31,7 @@ update_status ModuleSceneStart::Update()
 	counter++;
 	if ((counter / 60) % 2 == 0)
 	{		
-		App->renderer->Blit(enter, SCREEN_HEIGHT/2, SCREEN_WIDTH/2, NULL);
+		App->renderer->Blit(enter, 0, 0, NULL);
 	}
 
 	return UPDATE_CONTINUE;
